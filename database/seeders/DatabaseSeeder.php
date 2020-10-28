@@ -21,14 +21,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       //  \App\Models\Student::factory(20)->create();
 
 
-       /*for ($i=1; $i <= 6; $i++) { 
-       	  Course::create(['title'=> 'Cours_'.$i,'unique_id' => uniqid(),'token' => Str::random(60),'image' => 'image'.rand(1,6), 'description' => '  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        //Categorie::create(['name' => 'Permis de conduire']);
+        //Categorie::create(['name' => 'Recyclage']);
+        //\App\Models\Student::factory(20)->create();
+
+
+
+
+
+       for ($i=1; $i <= 6; $i++) { 
+       	  Course::create(['title'=> 'Cours_'.$i,'unique_id' => uniqid(),'token' => Str::random(60),'image' => 'image'.rand(1,6).'.jpg', 'description' => '  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ]);
-       }*/
+       }
 
 
       /* for ($i=1; $i <= 100 ; $i++) { 
@@ -38,9 +45,9 @@ class DatabaseSeeder extends Seeder
        }*/
 
 
-      for ($i=1; $i <= 100 ; $i++) { 
-       	   Quiz::create([response' => 'response'.$i,'response_1' => 'r1','response_2' => 'r2','response_3' => 'r3','response_4' => 'r4','image'=>'image'.$i,'lesson_id'=>Lesson::all()->random()->id,'course_id'=>Course::all()->random()->id,'question' => 'je suis une question']);
-       } 
+     /*for ($i=1; $i <= 100 ; $i++) { 
+       	   Quiz::create(['response' => 'response'.$i,'response_1' => 'r1','response_2' => 'r2','response_3' => 'r3','response_4' => 'r4','image'=>'image'.$i,'lesson_id'=>Lesson::all()->random()->id,'course_id'=>Course::all()->random()->id,'question'=>'je suis une question']);
+       }*/ 
 
 
 
