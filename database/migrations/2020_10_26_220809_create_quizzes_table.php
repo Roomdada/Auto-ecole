@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateQuizzesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('quizzes', function (Blueprint $table) {
+            $table->id();
+            $table->string('question');
+            $table->string('response');
+            $table->string('response_1');
+            $table->string('response_2');
+            $table->string('response_3');
+            $table->string('response_4');
+            $table->string('image');
+            $table->foreignId('lesson_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('course_id')->constrained()->cascadeOnDelete();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('quizzes');
+    }
+}
